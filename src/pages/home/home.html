@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      JobSearch
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+	 <!--<ion-slides>
+
+        <ion-slide style="background-image: url('assets/img/jobClas.jpg')">
+            <p>Your dream Job is just a few taps away! Select Job Class.</p>
+        </ion-slide>
+       </ion-slides>-->
+	<ion-list>
+  		<ion-item>
+		    <ion-label>Job Class</ion-label>
+		    <ion-select [(ngModel)]="jobClass" multiple="true" cancelText="No" okText="Okay!">
+		      <ion-option value="Software Engineer" selected="true">Software Engineer</ion-option>
+		      <ion-option value="Information Technology">Information Technology</ion-option>
+		    </ion-select>
+		 </ion-item>
+		 <ion-item>
+		    <ion-label>Job State</ion-label>
+		    <ion-select [(ngModel)]="jobState" multiple="true" cancelText="No" okText="Okay!">
+		      <ion-option value="Massachusetts" selected="true">Massachusetts</ion-option>
+		      <ion-option value="RhodeIsland">RhodeIsland</ion-option>
+		    </ion-select>
+		  </ion-item>
+  		<ion-item>
+    		<ion-label>Job Category</ion-label>
+   			 <ion-select [(ngModel)]="jobCategory" multiple="true" cancelText="No" okText="Okay!">
+			      <ion-option value="FullTime" selected="true">FullTime</ion-option>
+			      <ion-option value="PartTime">PartTime</ion-option>
+			      <ion-option value="Contract">Contract</ion-option>
+			      <ion-option value="Internship">Internship</ion-option>
+			      <ion-option value="Temporary">Temporary</ion-option>
+    		</ion-select>
+  		</ion-item>
+  		<button ion-button item-left (click) ="nextPage();">GO</button>
+	</ion-list>
+</ion-content>
